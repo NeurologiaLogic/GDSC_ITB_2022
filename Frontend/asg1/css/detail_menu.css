@@ -1,0 +1,29 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.container{
+  padding:2rem;
+  display:flex;
+}
+.container img{
+  width:50%;
+  height:auto;
+  object-fit:cover;
+}
+@media screen and (max-width: 768px){
+  .container img{
+    width:100%;
+  }
+  .container{
+    flex-direction:column;
+  }
+  .container .right-content{
+    margin-left:0;
+  }
+}
+ol{
+  margin-left:1rem;
+}

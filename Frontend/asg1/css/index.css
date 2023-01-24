@@ -1,0 +1,57 @@
+/* use poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+h1{
+  text-align: center;
+  margin:1rem 0;
+}
+h2{
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+.container{
+  width:100%;
+  padding:0rem 2rem;
+  /* display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items: center; */
+}
+.container img{
+  width:25%;
+  height:auto;
+  object-fit:cover;
+}
+.menu{
+  display:flex;
+  margin:2rem 0;
+  padding:1rem;
+}
+.menu .content{
+  margin-left:1rem;
+}
+/* make the hover effect cool */
+.menu:hover{
+  background-color: #f1f1f1;
+  border-radius: 10px;
+
+}
+@media screen and (max-width: 768px){
+  .container img{
+    width:100%;
+  }
+  .menu{
+    flex-direction:column;
+  }
+  .menu .content{
+    margin-left:0;
+  }
+}
