@@ -16,10 +16,12 @@
   <body>
     <nav>
       <ul>
-        <li><a href="../index.html">Home</a></li>
+        <li>
+          <a href="../index.html"><h4>Home</h4></a>
+        </li>
         <li>
           <div class="list-of-food">
-            List Of Food
+            <h4>List Of Food</h4>
             <ul>
               <li><a href="./bibimbab.html">Bibimbab</a></li>
               <li><a href="./gimbab.html">Gimbab</a></li>
@@ -33,20 +35,21 @@
           </div>
         </li>
       </ul>
+      <div id="searchbar-container">
+        <input type="text" placeholder="Type here" id="searchbar" />
+        <div class="result"></div>
+      </div>
     </nav>
     <div class="container">
       <img alt="" id="thumbnail" />
       <div class="right-content">
         <h1></h1>
         <h2></h2>
-        <p>
-        </p>
+        <p></p>
         <br />
         <div class="steps">
           <h2>Steps</h2>
-          <ol id="ingredients">
-
-          </ol>
+          <ol id="ingredients"></ol>
         </div>
       </div>
     </div>
@@ -63,7 +66,14 @@
         const thumbnail = document.getElementById("thumbnail");
         const ingredients = document.getElementById("ingredients");
 
-        const { strMeal, strMealThumb,strCategory,strArea,strInstructions,strYoutube } = JSON;
+        const {
+          strMeal,
+          strMealThumb,
+          strCategory,
+          strArea,
+          strInstructions,
+          strYoutube,
+        } = JSON;
         thumbnail.src = strMealThumb;
         document.title = strMeal;
         document.querySelector("h1").innerHTML = strMeal;
@@ -71,9 +81,14 @@
         document.querySelector("p").innerHTML = strInstructions;
         console.log(JSON);
         for (let i = 1; i <= 20; i++) {
-          if (JSON[`strIngredient${i}`] != ''&&JSON[`strIngredient${i}`] != null) {
+          if (
+            JSON[`strIngredient${i}`] != "" &&
+            JSON[`strIngredient${i}`] != null
+          ) {
             let li = document.createElement("li");
-            li.innerHTML = `${JSON[`strIngredient${i}`]} - ${JSON[`strMeasure${i}`]}`;
+            li.innerHTML = `${JSON[`strIngredient${i}`]} - ${
+              JSON[`strMeasure${i}`]
+            }`;
             ingredients.appendChild(li);
           }
         }
