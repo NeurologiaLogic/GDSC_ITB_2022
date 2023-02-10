@@ -11,7 +11,7 @@ searchbar.addEventListener('input', async (e) => {
       console.log(data.meals)
       data.meals.forEach(meal => {
         const food_container = document.createElement('a')
-        food_container.href = `./dynamicFood.html?id=${meal.idMeal}`
+        food_container.href = (document.title=="Homepage")?`./detail_page/dynamicFood.html?id=${meal.idMeal}`:`./dynamicFood.html?id=${meal.idMeal}`
         food_container.classList.add('food-container')
         food_container.innerHTML = `
         <div class="food-img">
