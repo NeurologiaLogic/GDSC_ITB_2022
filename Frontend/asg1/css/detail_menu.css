@@ -13,6 +13,21 @@
   height:auto;
   object-fit:cover;
 }
+#ingredients li{
+  margin:2px;
+  padding:0;
+}
+ol{
+  margin-left:1rem;
+}
+video{
+  width:300px;
+  height:200px;
+  object-fit:cover;
+  position: fixed;
+  right:5px;
+  bottom:2px;
+}
 @media screen and (max-width: 768px){
   .container img{
     width:100%;
@@ -23,7 +38,7 @@
   .container .right-content{
     margin-left:0;
   }
-}
-ol{
-  margin-left:1rem;
+  video{
+    display:none;
+  }
 }

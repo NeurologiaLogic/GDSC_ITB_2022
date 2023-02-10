@@ -1,5 +1,5 @@
 Deskripsi program
-Website Menu Makanan Korea
+Website Menu Makanan Korea dengan judul makanan dan deskripsi makanan
 
 Identitas pembuat
 Nama   : Patrick Kwon

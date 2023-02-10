@@ -8,6 +8,7 @@ nav{
   /* give me soft color white*/
   background-color: #f1f1f1;
   padding:1rem;
+  justify-content:space-between;
 }
 ul{
   list-style:none;
@@ -31,12 +32,15 @@ li:hover{
   position:relative;
   cursor:pointer;
 }
+list-of-food h4{
+  position:relative;
+}
 .list-of-food ul{
   display:none;
   position:absolute;
   flex-direction:column;
   left:-1rem;
-  top:1.3rem;
+  /* top:.5rem; */
   background-color: #f1f1f1;
 }
 .list-of-food:hover ul{
@@ -50,4 +54,49 @@ li:hover{
 .list-of-food ul li:hover{
   background-color: rgb(225, 180, 180);
   border-radius: 0;
+}
+#searchbar-container{
+  position:relative;
+  margin-right:9rem;
+}
+#searchbar{
+  margin:auto 0;
+  height:30px;
+  padding:2px;
+  position:relative;
+  overflow:auto;
+}
+#searchbar-container .result{
+  position:absolute;
+  background:white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width:300px;
+}
+#searchbar-container .result .food-container{
+  margin:.5rem 0;
+  display:flex;
+  padding:0.5rem 1rem;
+}
+#searchbar-container .result .food-container:hover{
+  background-color: #f1f1f1f1;
+}
+#searchbar-container .result .food-container .food-info{
+  margin-left:1rem;
+}
+@media screen and (max-width: 768px){
+  .container img{
+    width:100%;
+  }
+  .container{
+    flex-direction:column;
+  }
+  .container .right-content{
+    margin-left:0;
+  }
+  #searchbar{
+    display:none;
+  }
+  .result{
+    display:none;
+  }
 }
